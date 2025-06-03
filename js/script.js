@@ -101,12 +101,19 @@ $(document).ready(function(){
   });
 
   // 카테고리 슬라이드 이벤트
-  let sliderWidth = $(".category .c_slider").outerWidth();
-  let trackWidth = $(".category .slide_track").outerWidth();
-  let maxScroll = trackWidth - sliderWidth;
 
+  let first_ml = "-315px";
+  let second_ml = "-260px";
+  let third_ml = "-210px";
+  let fourth_ml = "-170px";
   $(".category .slide").last().hover(function(){
-    $(".category .c_slider").css({"margin-left" : -maxScroll + "px"});
+    if($( window ).width() > 1280) {
+      $(".category .c_slider").css({"margin-left" : first_ml });
+    } else if( 1279 > $( window ).width() > 1024) {
+      $(".category .c_slider").css({"margin-left" : second_ml });
+    } else {
+      $(".category .c_slider").css({"margin-left" : fourth_ml });
+    }
   });
   $(".category .slide").first().hover(function(){
     $(".category .c_slider").css({"margin-left" : "0px"});

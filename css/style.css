@@ -426,8 +426,8 @@ body.off::before {
   user-select: none;
 }
 #main .category .c_slider .slide {
-  width: 27%;
-  height: 380px;
+  width: 480px;
+  height: 390px;
   flex-shrink: 0;
   margin-right: 5px;
   overflow: hidden; /* 이미지 확대 */
@@ -488,7 +488,7 @@ body.off::before {
   transform: rotate(135deg);
   position: absolute; right: 15px; top: 41%;
 }
-#main .category .slide.on { width: 35%; }
+#main .category .slide.on { width: 700px; }
 #main .category .slide.on .more_btn { width: 90px; height: 40px; }
 #main .category .slide.on .more_btn .more { opacity: 1; }
 
@@ -868,14 +868,20 @@ body.off::before {
 #footer .fnb .fnb_txt:last-child::before {
   content: none;
 }
+
+
+/*      미디어쿼리      */
 @media screen and (max-width: 1500px) {
   /* banner */
   #main .banner .carousel .carousel-item {
     height: 600px;
   }
   /* category */
-  #main .category .c_slider .slide { height: 300px; }
-
+  #main .category .c_slider .slide {
+    width: 380px;
+    height: 340px;
+  }
+  #main .category .slide.on { width: 590px; }
   /* new-best */
   #main .new-best .products .products_wrap .first_row {
     margin-bottom: 0;
@@ -913,6 +919,12 @@ body.off::before {
   #main .banner .carousel .carousel-item {
     height: 600px;
   }
+  /* category 슬라이드 사이즈 */
+  #main .category .c_slider .slide {
+    width: 320px;
+    height: 340px;
+  }
+  #main .category .slide.on { width: 480px; }
 }
 
 /* 작은 노트북 */
@@ -1044,7 +1056,12 @@ body.off::before {
   #main .category .c_slider .slide_track {
     padding: 0px 20px; /* 섹션 간격 */
   }
-
+  /* category 슬라이드 사이즈 */
+  #main .category .c_slider .slide {
+    width: 270px;
+    height: 340px;
+  }
+  #main .category .slide.on { width: 360px; }
   #main .category .slide .txt_wrap {
     padding: 10px;
   }
@@ -1185,10 +1202,13 @@ body.off::before {
     height: 720px;
     background-position: 80% 50%;
   }
+  /* category 슬라이드 사이즈 */
   #main .category .c_slider .slide {
-    width: 30%;
+    width: 200px;
     height: 250px;
   }
+  #main .category .slide.on { width: 270px; }
+
   #main .nb_wrap .img_wrap {
     height: 480px;
     background-size: 100%;
@@ -1213,14 +1233,8 @@ body.off::before {
   #main .t_slider .t_info_box {
     height: 340px;
   }
-
   #footer .ft_info {
     flex-direction: column;
   }
-}
-
-/* 모바일 (세로) */
-@media screen and (max-width: 640px) {
-  
 }
 
